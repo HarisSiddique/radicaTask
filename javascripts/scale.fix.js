@@ -16,5 +16,22 @@ fixScale = function(doc) {
 		scales = [.25, 1.6];
 		doc[addEvent](type, fix, true);
 	}
+	var myArray = [];
+	var arrayMax = 40;
+	var limit = arrayMax + 1;
+ function Generate()
+{
+	
+	for (var i = 0; i < arrayMax; i++)
+		{
+		  myArray.push(Math.floor(Math.random()*limit));
+		}
+	document.frm.result.value = myArry;
+}
+function mySort()
+{
+	myArry.sort(function(a, b){return a-b});
+	document.frm.result.value = myArry;
+}
 
 };
