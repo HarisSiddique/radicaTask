@@ -38,16 +38,34 @@
   <input type="text" name="result" size=24 readonly>
   </br>
   </br>
-  <input type="button" name="gen" value="Generate Numbers" OnClick="NumPressed(7)" style="width:80px">
-  <input type="button" name="sort" value="Sort" OnClick="NumPressed(8)" style="width:80px">
+  <input type="button" name="gen" value="Generate Numbers" OnClick="Generate()" style="width:160px">
+  <input type="button" name="sort" value="Sort" OnClick="mySort()" style="width:80px">
   
   
 </form>
 
     </section>
     
-    <script>
-  
+
+    
+  <script>
+  	var myArray = [];
+	var arrayMax = 40;
+	var limit = arrayMax + 1;
+ function Generate()
+{
+	
+	for (var i = 0; i < arrayMax; i++)
+		{
+		  myArray.push(Math.floor(Math.random()*limit));
+		}
+	document.frm.result.value = myArry;
+}
+function mySort()
+{
+	myArry.sort(function(a, b){return a-b});
+	document.frm.result.value = myArry;
+}
 
 </script>
     
