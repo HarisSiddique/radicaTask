@@ -48,26 +48,27 @@
 <script>
   
 var aRRAY = [10];
-function myFunction() {
-
-
-for(var i=0;i<10;i++)
+function myFunction()
 {
 
 
-var ran = Math.floor((Math.random() * 100) + 1);
-for(var j=0;j<=i;j++)
+	for(var i=0;i<10;i++)
+	{
+		var ran = Math.floor((Math.random() * 100) + 1);
+		for(var j=0;j<=i;j++)
+		{
+			if(aRRAY[j] == ran) 
+			{
+				ran = Math.floor((Math.random() * 100) + 1); 
+			}
+		}
+		aRRAY[i] = ran;
+	}
+	document.getElementById("demo").innerHTML = aRRAY;
+}
+
+function mySort() 
 {
-if(aRRAY[j] == ran) {
-ran = Math.floor((Math.random() * 100) + 1); }
-}
-aRRAY[i] = ran;
-}
-    document.getElementById("demo").innerHTML = aRRAY;
-}
-
-function mySort() {
-
     aRRAY.sort(function(a, b){return a-b});
     document.getElementById("demo").innerHTML = aRRAY;
 }
