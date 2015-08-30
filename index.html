@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
-    <script src="javascripts/scale.fix.js"></script>
+    //<script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -46,6 +46,26 @@
 
     </section>
     
+<script>
+  	var myArray = [];
+	var arrayMax = 40;
+	var limit = arrayMax + 1;
+ function Generate()
+{
+	
+	for (var i = 0; i < arrayMax; i++)
+		{
+		  myArray.push(Math.floor(Math.random()*limit));
+		}
+	document.frm.result.value = myArry;
+}
+function mySort()
+{
+	myArry.sort(function(a, b){return a-b});
+	document.frm.result.value = myArry;
+}
+
+</script>
 
     
  
